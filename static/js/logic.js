@@ -30,8 +30,7 @@ d3.json(earthquake_link).then(function(data){
   });
 
   function getValue(x) {
-  return x > 100 ? "#ec6a6a" :
-         x > 90 ? "#ec6a6a" :
+  return x > 90 ? "#ec6a6a" :
          x > 70 ? "#efa76a" :
          x > 50 ? "#f2ba4c" :
          x > 30 ? "#f2dc4c" :
@@ -41,9 +40,8 @@ d3.json(earthquake_link).then(function(data){
   let legend = L.control({ position: "bottomleft" });
   legend.onAdd = function() {
     let div = L.DomUtil.create("div", "info legend");
-    let limits = [100, 90, 70, 50, 30, 10, -10]
+    let limits = [90, 70, 50, 30, 10, -10]
     let colors = ["#ec6a6a",
-                  "#ec6a6a",
                   "#efa76a",
                   "#f2ba4c",
                   "#f2dc4c",
